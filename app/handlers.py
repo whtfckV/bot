@@ -16,10 +16,9 @@ from bot_instance import bot
 import app.keyboards as kb
 
 load_dotenv()
-MY = getenv("MY")
 LISA = getenv("LISA")
-if not MY or not LISA:
-    raise ValueError("Переменные окружения MY и LISA не установлены")
+if not LISA:
+    raise ValueError("Переменные окружения LISA не установлены")
 
 # Get the absolute path of the project root
 # project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

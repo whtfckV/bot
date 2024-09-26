@@ -1,3 +1,4 @@
+import asyncio
 from aiogram import html, F
 from aiogram import Router
 from aiogram.types import (
@@ -185,6 +186,8 @@ async def contact_handler(message: Message, state: FSMContext):
     await message.answer_photo(
         price, caption="Прайс", reply_markup=kb.appointment_keyboard
     )
+    
+    
 
     await message.answer(
         "Ты молодец! Желаю успехов в освоении вокала и море удовольствия от занятий! ✌🏻\n"
@@ -233,6 +236,8 @@ async def phone_number_handler(message: Message, state: FSMContext) -> None:
     await message.answer_photo(
         price, caption="Прайс", reply_markup=kb.appointment_keyboard
     )
+    
+    await asyncio.sleep(50)
 
     await message.answer(
         "Ты молодец! Желаю успехов в освоении вокала и море удовольствия от занятий! ✌🏻\n"

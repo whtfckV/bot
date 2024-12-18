@@ -187,7 +187,7 @@ async def contact_handler(message: Message, state: FSMContext):
         price, caption="Прайс", reply_markup=kb.appointment_keyboard
     )
     
-    
+    await asyncio.sleep(50)
 
     await message.answer(
         "Ты молодец! Желаю успехов в освоении вокала и море удовольствия от занятий! ✌🏻\n"
@@ -202,7 +202,7 @@ async def contact_handler(message: Message, state: FSMContext):
         f"- Опыт вокала: {user_data_dict[message.from_user.id]['vocal_experience']}\n"
         f"- Музыкальные цели: {user_data_dict[message.from_user.id]['music_goals']}\n"
         f"- Цели обучения: {user_data_dict[message.from_user.id]['learning_goals']}\n"
-        f"- Номер телефона: {user_data_dict[message.from_user.id]['contact']}"
+        f"- Номер телефона: {user_data_dict[message.from_user.id]['contact']}\n"
         "Был бы у меня хуй, его можно было бы отсосать"
     )
 
